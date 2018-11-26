@@ -1,3 +1,3 @@
 export const config = {
-  cocToken: `your coc api token`,
+  cocToken: process.env.token || `your coc api token`,
 };

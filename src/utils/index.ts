@@ -31,6 +31,6 @@ export class Request {
     } catch (e) {
       throw new Error(`访问（${this.options.request.uri}）失败： ${e.name}  --  ${e.error.toString()}`);
     }
-    return response.body;
+    return JSON.parse(response.body);
   }
 }
