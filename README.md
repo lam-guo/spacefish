@@ -9,6 +9,8 @@ coc_api_nodejs
 ```bash
 $ npm install
 ```
+## config
+config the config/index, set up your coc api token
 
 ## Running the app
 
