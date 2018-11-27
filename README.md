@@ -43,8 +43,9 @@ $ npm run test:cov
 ### 部落相关
 
 #### 查询部落
-路由：'api/clans'
-参数： query
+* 路由：'api/clans'
+* 参数： query
+
 |参数名|意义|类型|
 |--|:--|:--|:--|
 |name|部落名|string|
@@ -58,19 +59,19 @@ $ npm run test:cov
 
 ---
 #### 根据部落Tag查询部落详情
-路由: 'api/clans/tag/{tag}'
-参数： param
+* 路由: 'api/clans/tag/{tag}'
+* 参数： param
 
-|参数名|意义|类型|备注
+|参数名|意义|类型|备注|
 |--|:--|:--|:--|:--|
 |tag|部落tag|string|不要带#号|
 
 ---
 
 #### 根据部落Tag查询部落成员
-路由: 'api/clans/tag/{tag}/members'
-参数： param
+* 路由: 'api/clans/tag/{tag}/members'
+* 参数： param
 
-|参数名|意义|类型|备注
+|参数名|意义|类型|备注|
 |--|:--|:--|:--|:--|
 |tag|部落tag|string|不要带#号|
