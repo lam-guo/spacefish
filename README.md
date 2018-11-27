@@ -47,7 +47,7 @@ $ npm run test:cov
 * 参数： query
 
 |参数名|意义|类型|
-|--|:--|:--|:--|
+|:--:|:--:|:--:|
 |name|部落名|string|
 |warFrequency|战争频率|string|
 |minMembers|最少部落成员数|int|
@@ -63,7 +63,7 @@ $ npm run test:cov
 * 参数： param
 
 |参数名|意义|类型|备注|
-|--|:--|:--|:--|:--|
+|:--:|:--:|:--:|:--:|
 |tag|部落tag|string|不要带#号|
 
 ---
@@ -73,5 +73,5 @@ $ npm run test:cov
 * 参数： param
 
 |参数名|意义|类型|备注|
-|--|:--|:--|:--|:--|
+|:--:|:--:|:--:|:--:|
 |tag|部落tag|string|不要带#号|
