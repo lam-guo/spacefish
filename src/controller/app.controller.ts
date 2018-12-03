@@ -43,7 +43,8 @@ export class AppController {
   @Post('/players')
   async getPlayersBtTags(@Body() body) {
     const { tags } = body;
-    if (!tags || !tags.length) throw new HttpException('tag不能为空', HttpStatus.FORBIDDEN);
+    if (!tags || !tags.length) throw new HttpException('tags不能为空', HttpStatus.FORBIDDEN);
+    if (tags.length > 30) throw new HttpException('tags不能多于30', HttpStatus.FORBIDDEN);
     return await this.appService.getPlayersBtTags(tags);
   }
 }
