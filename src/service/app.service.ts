@@ -35,4 +35,14 @@ export class AppService {
     }}); 
     return await request.send();
   }
+
+  async getPlayersBtTags(tags): Promise<object> {
+    const requests = tags.map(tag => {
+      const request = new Request({request: {
+        uri: `https://api.clashofclans.com/v1/players/%23${tag}`,
+      }});
+      return request.send();
+    })
+    return await Promise.all(requests);
+  }
 }

@@ -1,4 +1,4 @@
-import { Get, Controller, Query, HttpException, HttpStatus, Param } from '@nestjs/common';
+import { Get, Controller, Query, HttpException, HttpStatus, Param, Body } from '@nestjs/common';
 import { AppService } from '../service/app.service';
 
 @Controller('api')
@@ -38,5 +38,12 @@ export class AppController {
     const { tag } = param;
     if (!tag) throw new HttpException('tag不能为空', HttpStatus.FORBIDDEN);
     return await this.appService.getPlayerByTag(tag);
+  }
+
+  @Post('/players')
+  async getPlayersBtTags(@Body() body) {
+    const { tags } = body;
+    if (!tags || !tags.length) throw new HttpException('tag不能为空', HttpStatus.FORBIDDEN);
+    return await this.appService.getPlayersBtTags(tags);
   }
 }
