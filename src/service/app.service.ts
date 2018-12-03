@@ -8,23 +8,30 @@ export class AppService {
     return 'Hello World!';
   }
 
-  async clans(query): Promise<object>{
+  async clans(query): Promise<object> {
     const request = new Request({request: {
       uri: `https://api.clashofclans.com/v1/clans?` + qs.stringify(query),
     }}); 
     return await request.send();
   }
 
-  async getClanByTag(tag): Promise<object>{
+  async getClanByTag(tag): Promise<object> {
     const request = new Request({request: {
       uri: `https://api.clashofclans.com/v1/clans/%23${tag}`,
     }}); 
     return await request.send();
   }
 
-  async getClanMemByTag(tag): Promise<object>{
+  async getClanMemByTag(tag): Promise<object> {
     const request = new Request({request: {
       uri: `https://api.clashofclans.com/v1/clans/%23${tag}/members`,
+    }}); 
+    return await request.send();
+  }
+
+  async getPlayerByTag(tag): Promise<object> {
+    const request = new Request({request: {
+      uri: `https://api.clashofclans.com/v1/players/%23${tag}`,
     }}); 
     return await request.send();
   }

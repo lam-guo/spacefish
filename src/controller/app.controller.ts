@@ -32,4 +32,11 @@ export class AppController {
     if (!tag) throw new HttpException('tag不能为空', HttpStatus.FORBIDDEN);
     return await this.appService.getClanMemByTag(tag);
   }
+
+  @Get('/player/tag/:tag')
+  async getPlayerByTag(@Param() param) {
+    const { tag } = param;
+    if (!tag) throw new HttpException('tag不能为空', HttpStatus.FORBIDDEN);
+    return await this.appService.getPlayerByTag(tag);
+  }
 }
